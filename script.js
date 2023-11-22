@@ -2,7 +2,7 @@
     'use strict';
 
     var ul = document.querySelector('ul');
-    var lis = ul.querySelector('li');
+    var lis = ul.querySelectorAll('li');
     var txtTask = document.querySelector('#txtTask');
     var btn = document.querySelector('#btn');
 
@@ -14,8 +14,8 @@
         }
     });
 
-    for (var i  = 0; i < lis.clientHeight; i++) {
-    lis[i].addEventListener('click',toggleDone)
+    for(var i = 0; i < lis.length; i++){
+        lis[i].addEventListener('click',toggleDone)
     }
 
     function toggleDone(){
